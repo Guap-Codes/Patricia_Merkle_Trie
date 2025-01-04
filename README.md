@@ -9,27 +9,6 @@ A Rust implementation of a Patricia Merkle Trie, which combines the space effici
 - Generic key and value types
 - Full CRUD operations (Create, Read, Update, Delete)
 
-## Example
-
-```rust
-use patricia_merkle_trie::{PatriciaMerkleTrie, Result};
-
-fn example() -> Result<()> {
-    let mut trie = PatriciaMerkleTrie::new();
-    
-    // Insert a key-value pair
-    trie.insert(b"hello".to_vec(), b"world".to_vec())?;
-    
-    // Retrieve the value
-    let value = trie.get(&b"hello".to_vec())?;
-    assert_eq!(value.unwrap(), b"world");
-    
-    // Get the root hash
-    let root_hash = trie.root_hash()?;
-    
-    Ok(())
-}
-```
 
 ## Usage
 
@@ -65,6 +44,28 @@ Utility functions for trie operations.
 ### `error`
 
 Defines the various error conditions that can occur during trie operations, providing specific error types for different failure scenarios.
+
+## Example
+
+```rust
+use patricia_merkle_trie::{PatriciaMerkleTrie, Result};
+
+fn example() -> Result<()> {
+    let mut trie = PatriciaMerkleTrie::new();
+    
+    // Insert a key-value pair
+    trie.insert(b"hello".to_vec(), b"world".to_vec())?;
+    
+    // Retrieve the value
+    let value = trie.get(&b"hello".to_vec())?;
+    assert_eq!(value.unwrap(), b"world");
+    
+    // Get the root hash
+    let root_hash = trie.root_hash()?;
+    
+    Ok(())
+}
+```
 
 ## Examples
 
