@@ -1,0 +1,31 @@
+# Rust build directory
+/target/
+
+/target/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Rust specific
+**/*.rs.bk
+Cargo.lock
+
+# Debug files
+*.pdb
+
+# Generated documentation
+/doc/
+/target/doc/
+
+# Test coverage
+/coverage/
+*.profraw
+
+# Environment variables
+.env
+.env.local
